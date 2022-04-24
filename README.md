@@ -5,6 +5,6 @@ This application is simple. The first page is the list of surveys available, and
 The survey is accessed via a WebView container. To access the survey, simply click the button for the workshop you're in.
 
 ## Project Team
-Derek Lilienthal
-Andrew Cline
-Kathryn Grose
+- Derek Lilienthal
+- Andrew Cline
+- Kathryn Grose
