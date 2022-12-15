@@ -13,4 +13,6 @@
     <string name="survey_nav_button">Workshop Survey</string>
     <string name="logo_info">Workshop Logo</string>
     <string name="return_button">Finished!</string>
+    <string name="test_image">test Image</string>
+    <string name="take_a_photo">Take a photo</string>
 </resources>

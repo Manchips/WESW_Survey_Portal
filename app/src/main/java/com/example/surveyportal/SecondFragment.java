@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -22,6 +25,7 @@ import com.example.surveyportal.databinding.FragmentSecondBinding;
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
+    private FragmentSecondBinding binding2;
 
     @Override
     public View onCreateView(
@@ -36,6 +40,7 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
         WebView myWebView = (WebView) view.findViewById(R.id.webview);
         myWebView.setWebViewClient(new WebViewClient() {
@@ -54,11 +59,15 @@ public class SecondFragment extends Fragment {
                 }
             }
         });
+
+
+
         // Enable Javascript
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
         myWebView.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSdSIUuIP6pHHCl8YPpYUL8jdaiKxrN8XZeeRYCYuHiFKI2-Wg/viewform?usp=sf_link");
+
 
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +76,7 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+
     }
 
     @Override
